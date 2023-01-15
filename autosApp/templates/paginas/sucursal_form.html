@@ -1,0 +1,10 @@
+{% extends 'paginas/base.html' %}
+
+{% block content %}
+<h1>Agregar sucursal</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="comprar auto">
+</form>
+{% endblock content %}

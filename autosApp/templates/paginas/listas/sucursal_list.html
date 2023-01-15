@@ -1,0 +1,29 @@
+{% extends 'paginas/base.html' %}
+
+{% block content %}
+<h1>Listado de Sucursales</h1>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>ciudad</th>
+            <th>Estado</th>
+            <th>Pais</th>
+            <th>Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sucursal in sucursales %}
+        <tr>
+            <td>{{ sucursal.nombre }}</td>
+            <td>{{ sucursal.direccion }}</td>
+            <td>{{ sucursal.ciudad}}</td>
+            <td>{{ sucursal.estado}}</td>
+            <td>{{ sucursal.pais}}</td>
+            <td>{{ sucursal.telefono}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

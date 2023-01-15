@@ -1,0 +1,23 @@
+{% extends 'paginas/base.html' %}
+
+{% block content %}
+<h1>Listado de Autos Registrados</h1>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Auto</th>
+            <th>Precio Venta</th>
+            <th>Comprador Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for lista in ventas %}
+        <tr>
+            <td>{{ lista.auto }}</td>
+            <td>{{ lista.precio_venta }}</td>
+            <td>{{ lista.comprador_nombre}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

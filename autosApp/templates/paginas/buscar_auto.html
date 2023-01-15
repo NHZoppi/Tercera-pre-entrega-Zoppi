@@ -1,0 +1,13 @@
+{% extends "paginas/base.html" %}
+
+{% block content %}
+    <form method="get">
+        {{ filter.form.as_p }}
+        <input type="submit" />
+    </form>
+    {% if request.GET %}
+        {% for obj in filter.qs %}
+            {{ obj.modelo }} - {{obj.marca}} - {{ obj.patente }} - ${{ obj.precio }}<br/>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
