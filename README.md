@@ -38,7 +38,7 @@ Una vez clonado, nos tenemos que posicionar en la carpeta del proyecto. Te tiene
         -.gitignore
         -requirements.txt
 
-una vez que nos pocisionamos en la carpeta miproyecto, tipeamos en el CMD:
+una vez que nos posicionamos en la carpeta miproyecto, tipeamos en el CMD:
 
     python manage.py migrate
 
