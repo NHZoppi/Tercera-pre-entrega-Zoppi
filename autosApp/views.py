@@ -28,7 +28,7 @@ def sucursal_create(request):
         form = SucursalForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('paginas/listas/sucursal_list')
+            return redirect('ListarSucursales')
     else:
         form = SucursalForm()
     return render(request, 'paginas/sucursal_form.html', {'form': form})
